@@ -1,40 +1,31 @@
-/* Style général de la page */
+/* Styles généraux */
 body { 
     font-family: sans-serif; 
     color: #333; 
 }
 
-/* Taille du logo */
 .logo{ 
     height: 70px; 
 }
 
-/* Titre "BTS CIEL" en haut à droite */
 .ciel-title { 
     font-size: 2rem; 
     font-weight: bold; 
 }
 
-/* Fond gris clair pour les titres de section */
 .section-title { 
     background-color: #f8f9fa; 
     border: 1px solid #dee2e6; 
     padding: 10px; 
 }
 
-/* =========================================
-   TABLEAU DES DONNÉES
-   ========================================= */
-
-/* Supprime les bordures par défaut de Bootstrap
-   et ajoute un espace entre les colonnes */
+/*border-spacing écarte les colonnes ; les bordures Bootstrap sont désactivées */
 .custom-data-table {
     border-collapse: separate;
     border-spacing: 10px 0;
     border: none !important;
 }
 
-/* En-têtes du tableau : fond bleu, texte blanc, hauteur fixe */
 .blue-header {
     background-color: #4A76C0 !important;
     color: white;
@@ -42,30 +33,27 @@ body {
     border: none !important;
 }
 
-/* Taille des icônes dans les en-têtes */
 .icon-img {
     height: 60px;
 }
 
-/* Lignes grises foncées (impaires) */
+/* Alternance de couleur des lignes */
 .gray-row td {
     background-color: #DDE2EE !important;
     border: none !important;
 }
 
-/* Lignes grises claires (paires) — alternance de couleur */
 .light-gray-row td {
     background-color: #F0F2F7 !important;
     border: none !important;
 }
 
-/* Style des liens en bas de page */
 .btn-link {
     text-decoration: none;
     color: #4A76C0;
 }
 
-/* Empêche Bootstrap de changer la couleur des boutons au survol */
+/* enlève les effets de survol Bootstrap sur les boutons */
 .btn-outline-primary:hover,
 .btn-outline-primary:focus,
 .btn-outline-primary:active {
@@ -74,11 +62,8 @@ body {
     box-shadow: none !important;
 }
 
-/* =========================================
-   MENU DÉROULANT SANS JAVASCRIPT
-   Même fonctionnement que dans styles.css :
-   checkbox cachée + label cliquable
-   ========================================= */
+/*Le label clique sur la checkbox cachée ; quand elle est cochée,
+le sélecteur CSS ".menu-check:checked ~ .menu-nav" affiche la nav */
 
 .menu-check { display: none; }
 
@@ -104,7 +89,7 @@ body {
 
 .menu-btn:hover { background-color: #e8f0fe; }
 
-/* Les liens sont cachés par défaut */
+/* Liens cachés par défaut, affichés quand la checkbox est cochée */
 .menu-nav {
     display: none;
     flex-direction: row;
@@ -112,7 +97,6 @@ body {
     gap: 6px;
 }
 
-/* Quand la case est cochée → on affiche les liens */
 .menu-check:checked ~ .menu-nav { display: flex; }
 
 .menu-lien {
