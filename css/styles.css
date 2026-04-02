@@ -1,8 +1,15 @@
+/* =========================================
+   MENU DÉROULANT SANS JAVASCRIPT
+   La case à cocher est invisible,
+   c'est le label qui sert de bouton cliquable
+   ========================================= */
 
+/* Cache la vraie case à cocher */
 .menu-check {
     display: none;
 }
 
+/* Style du bouton "Menus" (c'est un label, pas un vrai bouton) */
 .menu-btn {
     display: inline-block;
     padding: 6px 18px;
@@ -12,13 +19,14 @@
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
-    user-select: none;
+    user-select: none; /* Empêche la sélection du texte au clic */
 }
 
 .menu-btn:hover {
     background-color: #e8f0fe;
 }
 
+/* Conteneur du menu : bouton et liens sur la même ligne */
 .menu-wrapper {
     display: flex;
     flex-direction: row;
@@ -27,6 +35,7 @@
     gap: 8px;
 }
 
+/* Les liens sont cachés par défaut */
 .menu-nav {
     display: none;
     flex-direction: row;
@@ -34,10 +43,12 @@
     gap: 6px;
 }
 
+/* Quand la case est cochée → on affiche les liens */
 .menu-check:checked ~ .menu-nav {
     display: flex;
 }
 
+/* Style de chaque lien du menu */
 .menu-lien {
     display: inline-block;
     padding: 6px 18px;
@@ -47,7 +58,7 @@
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    white-space: nowrap;
+    white-space: nowrap; /* Empêche le texte de se couper en deux lignes */
 }
 
 .menu-lien:hover {
@@ -55,6 +66,7 @@
     color: #0d6efd;
 }
 
+/* Taille du logo dans l'en-tête */
 .logo {
     height: 70px; 
 }
